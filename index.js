@@ -59,12 +59,12 @@ function addStar() {
 Array(250).fill().forEach(addStar);
 
 // changes bg
-const spaceTexture = new THREE.TextureLoader().load("./dist/space.jpg");
+const spaceTexture = new THREE.TextureLoader().load("space.jpg");
 scene.background = spaceTexture;
 
 // avatar
 
-const aniTexture = new THREE.TextureLoader().load("./dist/ani.png");
+const aniTexture = new THREE.TextureLoader().load("ani.png");
 const ani = new THREE.Mesh(
   new THREE.BoxGeometry(6, 6, 6),
   //map prop on the material as a texture
@@ -73,8 +73,8 @@ const ani = new THREE.Mesh(
 scene.add(ani);
 
 //MOOON
-const moonTexture = new THREE.TextureLoader().load("./dist/moon.jpg");
-const imageTexture = new THREE.TextureLoader().load("./dist/normal.jpg");
+const moonTexture = new THREE.TextureLoader().load("moon.jpg");
+const imageTexture = new THREE.TextureLoader().load("normal.jpg");
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
   new THREE.MeshStandardMaterial({ map: moonTexture, normalMap: imageTexture })
